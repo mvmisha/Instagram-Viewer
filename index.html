@@ -8,8 +8,8 @@
 <body>
     <h1 style="margin-top: 30px">INSTAGRAM VIEWER</h1><br>
     <div id="busqueda" style="margin-left: 40%;">
-        <input type="text" id="inputtext">
-        <button onclick="loadDoc()"> Buscar </button> <br><br>
+        <input type="text" id="inputtext"  onkeydown = "if (event.keyCode == 13){loadDoc()}" >
+        <button onclick="loadDoc()"> Search </button> <br><br>
     </div>
     <section id="photos">
     <img id="foto1" scr="" width="200px">
