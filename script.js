@@ -13,7 +13,7 @@ function loadDoc() {
             alert(objeto.graphql.hashtag.edge_hashtag_to_media.edges.length);
 
             for (var i = 0; i < 11; i++) {
-                document.getElementById("foto" + i).src = objeto.graphql.hashtag.edge_hashtag_to_media.edges['"' + i + '"' ].node.display_url;
+                document.getElementById("foto" + i).src = objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.display_url;
             }
 
             /*
