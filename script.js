@@ -9,18 +9,26 @@ function loadDoc() {
             var objeto = JSON.parse(xhttp.responseText);
             var srcinstagram1, srcinstagram2, srcinstagram3, srcinstagram4, srcinstagram5, srcinstagram6, srcinstagram7,
                 srcinstagram8, srcinstagram9, srcinstagram10, srcinstagram11;
+
             alert(objeto.graphql.hashtag.edge_hashtag_to_media.edges.length);
-            srcinstagram1 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["0"].node.display_url;
-            srcinstagram2 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["1"].node.display_url;
-            srcinstagram3 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["2"].node.display_url;
-            srcinstagram4 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["3"].node.display_url;
-            srcinstagram5 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["4"].node.display_url;
-            srcinstagram6 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["5"].node.display_url;
-            srcinstagram7 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["6"].node.display_url;
-            srcinstagram8 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["7"].node.display_url;
-            srcinstagram9 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["8"].node.display_url;
-            srcinstagram10 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["9"].node.display_url;
-            srcinstagram11 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["10"].node.display_url;
+
+            for (var i = 0; i < 11; i++) {
+                "srcinstagram" + i = objeto.graphql.hashtag.edge_hashtag_to_media.edges[+'"' + i '"' + ].node.display_url;
+            }
+
+            /*
+                        srcinstagram1 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["0"].node.display_url;
+                        srcinstagram2 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["1"].node.display_url;
+                        srcinstagram3 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["2"].node.display_url;
+                        srcinstagram4 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["3"].node.display_url;
+                        srcinstagram5 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["4"].node.display_url;
+                        srcinstagram6 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["5"].node.display_url;
+                        srcinstagram7 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["6"].node.display_url;
+                        srcinstagram8 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["7"].node.display_url;
+                        srcinstagram9 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["8"].node.display_url;
+                        srcinstagram10 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["9"].node.display_url;
+                        srcinstagram11 = objeto.graphql.hashtag.edge_hashtag_to_media.edges["10"].node.display_url;
+            */
             document.getElementById("foto1").src = srcinstagram1;
             document.getElementById("foto2").src = srcinstagram2;
             document.getElementById("foto3").src = srcinstagram3;
