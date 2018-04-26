@@ -6,11 +6,15 @@ function loadDoc() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var objeto = JSON.parse(xhttp.responseText);
-            var srcinstagram1, srcinstagram2, srcinstagram3, srcinstagram4, srcinstagram5, srcinstagram6, srcinstagram7,
-                srcinstagram8, srcinstagram9, srcinstagram10, srcinstagram11;
 
-            console.log(objeto.graphql.hashtag.edge_hashtag_to_media.edges.length);
+            var seccion = document.createElement("section");
+            seccion.id = "photos"
+            document.body.appendChild(seccion);
+            for (var i = 0; i < objeto.graphql.hashtag.edge_hashtag_to_media.edges.length; i++) {
+                var newImage = document.createElement("img");
+                seccion.appendChild(newImage);
 
+            }
             for (var i = 0; i < 11; i++) {
                 console.log(i)
                 document.getElementById("foto" + i).src = objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.display_url;
