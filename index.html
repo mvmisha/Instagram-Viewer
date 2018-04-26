@@ -15,13 +15,11 @@
 
 <body>
     <div class="jumbotron">
-        <h1>Instagram Viewer</h1>
-        <form>
-            <div class="input-group input-group-lg">
-                <input type="text" class="form-control" id="inputtext" onkeydown="if (event.keyCode == 13){loadDoc()}">
-                <button onclick="loadDoc()"> Search </button>
-            </div>
-        </form>
+        <h1>INSTAGRAM VIEWER</h1><br>
+        <div id="busqueda" style="margin-left: 40%;">
+            <input type="text" id="inputtext" onkeydown="if (event.keyCode == 13){loadDoc()}">
+            <button onclick="loadDoc()"> Search </button> <br><br>
+        </div>
     </div>
     <section id="photos">
         <img id="foto1" scr="" width="200px">
