@@ -1,5 +1,4 @@
 function loadDoc() {
-    var d = new Date();
     var xhttp;
     var urlapi;
     urlapi = "https://www.instagram.com/explore/tags/" + document.getElementById("inputtext").value + "/?__a=1"
@@ -10,9 +9,10 @@ function loadDoc() {
             var srcinstagram1, srcinstagram2, srcinstagram3, srcinstagram4, srcinstagram5, srcinstagram6, srcinstagram7,
                 srcinstagram8, srcinstagram9, srcinstagram10, srcinstagram11;
 
-            alert(objeto.graphql.hashtag.edge_hashtag_to_media.edges.length);
+            console.log(objeto.graphql.hashtag.edge_hashtag_to_media.edges.length);
 
             for (var i = 0; i < 11; i++) {
+                console.log(i)
                 document.getElementById("foto" + i).src = objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.display_url;
             }
 
