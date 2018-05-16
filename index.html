@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>TTP - Inicio</title>
+    <title>Instagram Viewer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -14,14 +14,18 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1>INSTAGRAM VIEWER</h1><br>
-        <div id="busqueda" style="margin-left: 40%;">
-            <input type="text" id="inputtext" onkeydown="if (event.keyCode == 13){loadDoc()}">
-            <button onclick="loadDoc()"> Search </button> <br><br>
-        </div>
+
+    <div class="jumbotron body-content">
+        <h1>Instagram Viewer</h1>
+        <form>
+            <div style="width: 300px"class="input-group input-group-lg">
+                <input type="text" id="inputtext" onkeydown="if (event.keyCode == 13){loadDoc()}"class="form-control" placeholder="stanceworks">
+                <button type="button" onclick="loadDoc()" class="btn btn-default">Buscar</button>
+            </div>
+        </form>
     </div>
-    <section id="photos">
+
+    <!--<section id="photos">
         <img id="foto2" scr="" width="200px">
         <img id="foto3" scr="" width="200px">
         <img id="foto4" scr="" width="200px">
@@ -32,7 +36,7 @@
         <img id="foto9" scr="" width="200px">
         <img id="foto10" scr="" width="200px">
         <img id="foto11" scr="" width="200px">
-    </section>
+    </section>-->
 </body>
 
 </html>
