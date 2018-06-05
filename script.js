@@ -19,7 +19,8 @@ function loadDoc() {
                 console.log("aaa");
                 var newImage = document.createElement("img");
                 var newA = document.createElement("a");
-                newA.href = "www.instagram.com/p/"+objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.shortcode + "/";
+                newA.target="_blank";
+                newA.href = "http://www.instagram.com/p/"+objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.shortcode + "/";
                 newA.id = "aFoto" + i;
                 newImage.width = "120";
                 newImage.src = objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.display_url;
