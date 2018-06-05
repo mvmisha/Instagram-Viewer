@@ -13,17 +13,20 @@ function loadDoc() {
 
             var seccion = document.createElement("section");
             seccion.id = "photos";
-            seccion.class="row";
+            seccion.class = "row";
             document.body.appendChild(seccion);
             for (var i = 0; i < objeto.graphql.hashtag.edge_hashtag_to_media.edges.length; i++) {
                 console.log("aaa");
                 var newImage = document.createElement("img");
-                newImage.width="120";
+                var newA = document.createElement("a");
+                newA.href = "www.instagram.com/p/"
+                objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.shortcode + "/";
+                newA.id = "aFoto" + i;
+                newImage.width = "120";
                 newImage.src = objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.display_url;
                 newImage.id = "foto" + i;
-                newImage.href="www.instagram.com/p/"objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.shortcode+"/";
-
-                seccion.appendChild(newImage);
+                newA.appendChild(newImage);
+                seccion.appendChild(newA);
 
             }
         }
