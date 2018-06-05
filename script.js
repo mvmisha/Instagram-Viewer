@@ -21,6 +21,7 @@ function loadDoc() {
                 newImage.width="120";
                 newImage.src = objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.display_url;
                 newImage.id = "foto" + i;
+                newImage.href="www.instagram.com/p/"objeto.graphql.hashtag.edge_hashtag_to_media.edges[i].node.shortcode+"/";
 
                 seccion.appendChild(newImage);
 
